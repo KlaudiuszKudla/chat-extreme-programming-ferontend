@@ -1,4 +1,4 @@
-import { User } from '../../core/models/responseModel';
+import { User } from '../../core/models/formModel';
 import { Action, createReducer, on } from '@ngrx/store';
 import * as AuthActions from './auth.actions';
 
