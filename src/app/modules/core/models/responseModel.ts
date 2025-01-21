@@ -1,22 +1,25 @@
-import { FormControl } from '@angular/forms';
-
-
-export interface LoginForm {
-  login: FormControl<string>;
-  password: FormControl<string>;
+export interface IUser {
+  id: string;
+  login: string;
+  email: string;
+  role: string;
 }
 
-export interface RegisterForm extends LoginForm {
-  email: FormControl<string>;
-  repeatedPassword: FormControl<string>;
+export class User implements IUser {
+  constructor(
+    public id: string,
+    public login: string,
+    public email: string,
+    public role: string,
+  ) {}
+}
+export interface LoginData {
+  login: string;
+  password: string;
 }
 
-export interface PasswdRecoveryForm {
-  email: FormControl<string>;
-}
-export interface PasswordsForm {
-  password: FormControl<string>;
-  repeatedPassword: FormControl<string>;
+export interface ResetPasswordData {
+  email: string;
 }
 
 export interface ChangePasswordData {
@@ -24,13 +27,18 @@ export interface ChangePasswordData {
   uid: string;
 }
 
-export interface ResetPasswordData {
+export interface RegisterData {
   email: string;
+  login: string;
+  password: string;
 }
-
 
 export interface ResponseModel {
   timestamp: string;
   message: string;
   code: string;
+}
+
+export interface LoggedInResponse extends Omit<ResponseModel, 'message'> {
+  message: boolean;
 }

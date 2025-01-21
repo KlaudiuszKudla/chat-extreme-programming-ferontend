@@ -1,12 +1,12 @@
 import { Component, OnDestroy } from '@angular/core';
 import { FormService } from '../../../core/services/form.service';
 import { FormControl, FormGroup } from '@angular/forms';
-import { RegisterForm } from '../../../core/models/responseModel';
 import * as AuthActions from '../../store/auth.actions';
 import { Store } from '@ngrx/store';
 import { AppState } from '../../../../store/app.reducer';
 import { Observable } from 'rxjs';
 import { selectAuthError, selectAuthLoading } from '../../store/auth.selectors';
+import {RegisterForm} from "../../../core/models/formModel";
 
 @Component({
   selector: 'app-register',

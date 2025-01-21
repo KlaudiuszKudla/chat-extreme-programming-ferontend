@@ -1,6 +1,7 @@
-import { User } from '../../core/models/formModel';
+
 import { Action, createReducer, on } from '@ngrx/store';
 import * as AuthActions from './auth.actions';
+import {User} from "../../core/models/responseModel";
 
 export interface AuthState {
   user: User | null;
@@ -30,6 +31,20 @@ const _authReducer = createReducer(
       action.user.role,
     ),
     error: null,
+  })),
+  on(AuthActions.register, (state, action) => ({
+    ...state,
+    loading: true,
+  })),
+  on(AuthActions.registerSuccess, (state, action) => ({
+    ...state,
+    loading: false,
+    error: null,
+  })),
+  on(AuthActions.registerFailure, (state, action) => ({
+    ...state,
+    loading: false,
+    error: action.error,
   })),
   on(AuthActions.loginFailure, (state, action) => ({
     ...state,

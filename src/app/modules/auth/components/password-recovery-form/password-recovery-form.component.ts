@@ -4,7 +4,7 @@ import { FormControl, FormGroup } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { AuthService } from '../../../core/services/auth.service';
 import { NotifierService } from 'angular-notifier';
-import {PasswordsForm} from "../../../core/models/responseModel";
+import {PasswordsForm} from "../../../core/models/formModel";
 
 @Component({
   selector: 'app-password-recovery-form',

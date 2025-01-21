@@ -1,9 +1,10 @@
 import { Injectable } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import {
-  LoginForm, PasswdRecoveryForm, PasswordsForm, RegisterForm,
+
 } from '../models/responseModel';
 import {equivalentValidator} from "../../shared/validators/equivalent.validator";
+import {LoginForm, PasswdRecoveryForm, PasswordsForm, RegisterForm} from "../models/formModel";
 
 @Injectable({
   providedIn: 'root',
