@@ -6,7 +6,7 @@ import {
   LoginData, RegisterData,
 } from '../models/formModel';
 import { Observable } from 'rxjs';
-import {ResponseModel} from "../models/responseModel";
+import {ChangePasswordData, ResetPasswordData, ResponseModel} from "../models/responseModel";
 
 @Injectable({
   providedIn: 'root',
@@ -31,5 +31,19 @@ export class AuthService {
     return this.http.get<ResponseModel>(`${this.apiUrl}/activate`, {
       params,
     });
+  }
+
+  resetPassword(body: ResetPasswordData): Observable<ResponseModel> {
+    return this.http.post<ResponseModel>(`${this.apiUrl}/reset-password`, body);
+  }
+
+  changePassword(body: ChangePasswordData): Observable<ResponseModel> {
+    return this.http.patch<ResponseModel>(
+      `${this.apiUrl}/reset-password`,
+      body,
+      {
+        withCredentials: true,
+      },
+    );
   }
 }
