@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import {
-  LoginForm,
-} from '../models/forms.model';
+  LoginForm, RegisterForm,
+} from '../models/responseModel';
 
 @Injectable({
   providedIn: 'root',
@@ -20,6 +20,39 @@ export class FormService {
         nonNullable: true,
       }),
       password: new FormControl('', {
+        validators: [
+          Validators.required,
+          Validators.minLength(8),
+          Validators.maxLength(75),
+        ],
+        nonNullable: true,
+      }),
+    });
+  }
+
+  initRegisterForm(): FormGroup<RegisterForm> {
+    return new FormGroup({
+      email: new FormControl('', {
+        validators: [Validators.required, Validators.email],
+        nonNullable: true,
+      }),
+      login: new FormControl('', {
+        validators: [
+          Validators.required,
+          Validators.minLength(8),
+          Validators.maxLength(50),
+        ],
+        nonNullable: true,
+      }),
+      password: new FormControl('', {
+        validators: [
+          Validators.required,
+          Validators.minLength(8),
+          Validators.maxLength(75),
+        ],
+        nonNullable: true,
+      }),
+      repeatedPassword: new FormControl('', {
         validators: [
           Validators.required,
           Validators.minLength(8),
