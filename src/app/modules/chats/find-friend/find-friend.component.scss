@@ -1,0 +1,73 @@
+/* Style dla user-list */
+.user-list {
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 5px;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+/* Style dla nagłówka h2 */
+.user-list h2 {
+  color: #007bff;
+  display: flex;
+  justify-content: center;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+/* Style dla listy ul */
+.user-list ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+/* Style dla elementu li */
+.user-list li {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Style dla paragrafów p wewnątrz li */
+.user-list li p {
+  margin: 0;
+}
+
+/* Style dla przycisku button wewnątrz li */
+.user-list li button {
+  background-color: #0d6efd;
+  color: #fff;
+  border: none;
+  padding: 6px 8px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+/* Style dla przycisku button po najechaniu kursorem */
+.user-list li button:hover {
+  background-color: #215b88;
+}
+
+.user-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #ccc;
+  padding: 10px;
+}
+
+.user-info {
+  flex: 1;
+  margin-right: 10px;
+}
+
+.user-image img {
+  max-width: 100px; /* Dostosuj szerokość obrazu do własnych potrzeb */
+  max-height: 100px; /* Dostosuj wysokość obrazu do własnych potrzeb */
+}
