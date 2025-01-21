@@ -4,7 +4,6 @@ import * as AuthActions from '../../store/auth.actions';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 import { selectAuthError, selectAuthLoading } from '../../store/auth.selectors';
-
 import {FormService} from "../../../core/services/form.service";
 import {AppState} from "../../../../store/app.reducer";
 import {LoginForm} from "../../../core/models/formModel";

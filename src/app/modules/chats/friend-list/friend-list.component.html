@@ -1,0 +1,11 @@
+<div class="friends">
+    <h2>Lista Znajomych</h2>
+        <div class="friend"*ngFor="let friend of friends">
+           <div class="username"><b>NAZWA UŻYTKOWNIKA</b> : {{ friend.login }}</div>
+            <div class="email"><b>Email</b>: {{ friend.email }}</div>
+            <div class="buttons">
+                <button class="btn-delete" (click)="deleteFromFriendList(friend.id)">Usuń z listy znajomych</button>
+                <button class="btn-block" (click)="blockFriend(friend.id)">Zablokuj</button>
+            </div>
+        </div>
+</div>
