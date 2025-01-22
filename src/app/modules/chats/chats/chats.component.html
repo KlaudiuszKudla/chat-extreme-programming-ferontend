@@ -1,0 +1,28 @@
+<div class="chat-container">
+  <div class="message-container" *ngFor="let msg of messages" [ngClass]="{'sent-message': msg.username === username, 'received-message': msg.username !== username}">
+    <p><b>{{ msg.username }}</b></p>
+    <p>{{ msg.message }}</p>
+  </div>
+</div>
+<div class="input-container">
+  <input [(ngModel)]="message" placeholder="Enter a message" (keyup.enter)="sendMessage()">
+  <button (click)="sendMessage()">Wyślij wiadomość</button>
+</div>
+
+<!--<div>-->
+<!--  <input [(ngModel)]="username" placeholder="Enter a username" (keyup.enter)="setUsername()">-->
+<!--  <button (click)="setUsername()">set username</button>-->
+<!--</div>-->
+
+<!--<button (click)="initializeMediaStream()">Initialize Web Media Stream</button>-->
+<!--<button (click)="initializeWebSocketConnection()">Initialize Web Socket Connection</button>-->
+<!--<button (click)="subscribeTopic()">Subscribe Topic</button>-->
+<div class="input-container">
+<button class="btn-camera" (click)="createOffer()">Dołącz na kamerce</button>
+</div>
+
+
+<div id="videos">
+  <video class="video-player" id="user-1" autoplay playsinline></video>
+  <video class="video-player" id="user-2" autoplay playsinline></video>
+</div>

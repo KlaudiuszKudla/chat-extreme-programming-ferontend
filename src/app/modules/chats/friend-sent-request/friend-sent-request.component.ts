@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { ChatsService } from '../../../core/services/chats.service';
 import { Store } from '@ngrx/store';
-import { AppState } from '../../../../store/app.reducer';
 import { NotifierService } from 'angular-notifier';
-import { selectUserId } from '../../../auth/store/auth.selectors';
-import { ChatUser } from '../../../core/models/responseModel';
+import {ChatUser} from "../../core/models/responseModel";
+import {ChatsService} from "../../core/services/chats.service";
+import {AppState} from "../../../store/app.reducer";
+import {selectUserId} from "../../auth/store/auth.selectors";
 
 @Component({
   selector: 'app-friend-sent-request',
