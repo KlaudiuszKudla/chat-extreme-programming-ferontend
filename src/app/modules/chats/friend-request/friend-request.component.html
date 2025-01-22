@@ -1,0 +1,10 @@
+<div class="user-list">
+    <h2>Lista zaproszeń</h2>
+    <ul>
+        <li *ngFor="let friend of friends">
+          <p><b>Email</b>: {{ friend.email }}</p>
+          <p><b>Nazwa użytkownika</b>: {{ friend.login }}</p>
+            <button (click)="acceptFriend(friend.id)">Zaakceptuj znajomego</button>
+        </li>
+    </ul>
+</div>

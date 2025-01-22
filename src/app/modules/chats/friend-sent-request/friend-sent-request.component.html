@@ -1,0 +1,9 @@
+<div class="user-list">
+  <h2>Wysłane zaproszenia</h2>
+  <ul>
+    <li *ngFor="let friend of friends">
+      <p><b>Email</b>: {{ friend.email }}</p>
+      <p><b>Nazwa użytkownika</b>: {{ friend.login }}</p>
+    </li>
+  </ul>
+</div>

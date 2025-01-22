@@ -3,11 +3,13 @@ import { CommonModule } from '@angular/common';
 import {ChatsRoutingModule} from "./chats-routing.module";
 import {FriendListComponent} from "./friend-list/friend-list.component";
 import {FindFriendComponent} from "./find-friend/find-friend.component";
+import {FriendRequestComponent} from "./friend-request/friend-request.component";
+import {FriendSentRequestComponent} from "./friend-sent-request/friend-sent-request.component";
 
 
 
 @NgModule({
-  declarations: [FriendListComponent,FindFriendComponent],
+  declarations: [FriendListComponent,FindFriendComponent,FriendRequestComponent, FriendSentRequestComponent],
   imports: [
     CommonModule,ChatsRoutingModule,
   ]

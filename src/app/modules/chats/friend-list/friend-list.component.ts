@@ -50,4 +50,24 @@ export class FriendListComponent implements OnInit {
     });
   }
 
+  deleteFromFriendList(uuid: string) {
+    const friendForm = new FriendForm(this.id$, uuid);
+    this.chatService.deleteFriend(friendForm).subscribe((data) => {
+      if (data) {
+        this.notifierService.notify('success', data.message);
+        this.getFriends(this.id$);
+      }
+    });
+  }
+
+  blockFriend(uuid: string) {
+    const friendForm = new FriendForm(this.id$, uuid);
+    this.chatService.blockFriend(friendForm).subscribe((data) => {
+      if (data) {
+        this.notifierService.notify('success', data.message);
+        this.getFriends(this.id$);
+      }
+    });
+  }
+
 }
